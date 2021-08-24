@@ -20,8 +20,7 @@ public class Main {
                 System.out.println("1. Register");
                 System.out.println("2. Login");
                 System.out.println("3. Exit");
-                input = scanner.nextInt( );
-
+                input = scanner.nextInt();
                 switch (input) {
                     case 1:
                         registerUser();
@@ -48,12 +47,20 @@ public class Main {
     public static void registerUser() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter username");
+        String user = scanner.nextLine();
         System.out.println( );
         System.out.println("Enter password");
         System.out.println();
+        String passwd = scanner.nextLine();
+        System.out.println("Enter email");
+        System.out.println();
+        String email = scanner.nextLine();
+        System.out.println();
         System.out.println("..........Done.........");
         System.out.println();
-        // Process Queries Here
+        String[] input = {user,passwd,email};
+
+
     }
 
     public static void userLogIn() {

@@ -12,7 +12,7 @@ public class User {
         this.email = email;
     }
 
-    public String getUser() {
+    public String getUserName() {
         return user;
     }
 
@@ -22,6 +22,11 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public String[] userArray() {
+        String[] arr = {this.user,this.password,this.email};
+        return arr;
     }
 
     @Override

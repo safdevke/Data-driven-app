@@ -1,6 +1,7 @@
 package app.util;
 
 import java.sql.*;
+import java.util.Arrays;
 
 public class Dbutil {
 
@@ -20,14 +21,20 @@ public class Dbutil {
         }
     }
 
-    public boolean writeToDb(String query) throws SQLException {
+    public boolean writeToDb(String query, String[] replace) throws SQLException {
         preparedStatement = connection.prepareStatement(query);
-        return preparedStatement.executeUpdate(query) > 0;
+        for (int i = 1; i <= replace.length; i++) {
+            preparedStatement.setString(i, replace[i]);
+        }
+        return preparedStatement.executeUpdate() > 0;
     }
 
-    public ResultSet readFromDb(String query) throws SQLException {
+    public ResultSet readFromDb(String query, String[] replace) throws SQLException {
         preparedStatement = connection.prepareStatement(query);
-        return preparedStatement.executeQuery(query);
+        for (int i = 1; i <= replace.length; i++) {
+            preparedStatement.setString(i, replace[i]);
+        }
+        return preparedStatement.executeQuery();
     }
 
     public void close() throws SQLException {

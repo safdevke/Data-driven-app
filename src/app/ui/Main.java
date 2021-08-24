@@ -1,4 +1,4 @@
-package com.app.ui;
+package app.ui;
 
 public class Main {
 

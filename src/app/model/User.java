@@ -1,10 +1,11 @@
-package com.app.model;
+package app.model;
 
 public class User {
 
     final String user;
     final String password;
     final String email;
+    final int size = 3;
 
     public User(String user, String password, String email) {
         this.user = user;
@@ -22,5 +23,9 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public int getSize() {
+        return size;
     }
 }

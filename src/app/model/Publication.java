@@ -5,7 +5,6 @@ public class Publication {
     final String title;
     final String author;
     final String url;
-    final int size = 3;
 
     public Publication(String title, String author, String url) {
         this.title = title;
@@ -25,7 +24,8 @@ public class Publication {
         return url;
     }
 
-    public int getSize() {
-        return size;
+    @Override
+    public String toString() {
+        return this.title + " " + this.author + " " + this.url;
     }
 }

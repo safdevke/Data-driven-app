@@ -19,7 +19,7 @@ public class MappingRows {
     }
 
     public Publication mapRowsPub(ResultSet resultSet) throws SQLException {
-        ResultSetMetaData resultSetMetaData = resultSet.getMetaData( );
+        ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
         Publication publication = new Publication(resultSetMetaData.getColumnName(1),
                 resultSetMetaData.getColumnName(2),
                 resultSetMetaData.getColumnName(3));

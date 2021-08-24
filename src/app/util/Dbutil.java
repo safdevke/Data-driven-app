@@ -1,5 +1,4 @@
-package com.app.util;
-
+package app.util;
 
 import java.sql.*;
 

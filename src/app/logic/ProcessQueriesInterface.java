@@ -8,12 +8,18 @@ import java.sql.SQLException;
 
 public interface ProcessQueriesInterface {
 
-    public User mapRowsUser(ResultSet resultSet) throws SQLException;
+    User mapRowsUser(ResultSet resultSet) throws SQLException;
 
-    public Publication mapRowsPub(ResultSet resultSet) throws SQLException;
+    Publication mapRowsPub(ResultSet resultSet) throws SQLException;
 
-    public boolean register(User user) throws ClassNotFoundException, SQLException;
+    boolean register(User user) throws ClassNotFoundException, SQLException;
 
-    public boolean login(User user);
+    boolean login(User user);
+
+    boolean checkPassword(User user);
+
+    //public boolean checkPassword(User user);
+
+
 
 }

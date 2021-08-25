@@ -5,8 +5,8 @@ import app.model.User;
 
 public interface ProcessObjectsInterface {
 
-    public User createUser(String[] input);
+    User createUser(String[] input);
 
-    public Publication createPub(String[] input);
+    Publication createPub(String[] input);
 
 }
